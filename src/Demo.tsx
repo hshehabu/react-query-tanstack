@@ -15,7 +15,6 @@ export default function Demo() {
     queryKey: ["todos", { search }],
     queryFn: () => fetchTodos(search),
     staleTime: Infinity,
-    cacheTime: 0,
   });
 
   const { mutateAsync: addTodoMutation } = useMutation({
